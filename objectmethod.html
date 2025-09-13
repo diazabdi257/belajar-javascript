@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function sayHello(nama){
+            document.writeln (`<p>Hello ${nama}</p>`);
+        }
+
+        const person = {
+            nama: "Diaz",
+            sayHellow: sayHello
+        };
+        document.writeln(person.nama);
+        person.sayHellow("Saki")
+        // person.sayHello(); // ini akan error karena tidak ada parameter
+        person.sayHellow (person.nama); // ini akan menampilkan nama dari object person
+    </script>
+</body>
+</html>

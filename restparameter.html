@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sum(nama, ...data){
+            let total = 0;
+            for (const item of data) {
+                total += item;
+            }
+            document.writeln(`<p>Total ${nama} is ${total}</p>`)
+        }
+        
+        sum("Dompet", 10,20,30,40,50,60)
+        sum("Kembalian", 10,10,10,10)
+
+        //jika parameternya itu array
+
+        const saldo = [50, 20, 100, 100];
+        sum ("Bank", saldo); // ini hanya akan menampilkan data array saja tidak akan dijumlahkan
+
+        // jika ingin menambahkannya kita harus menambahkan ... didepan parameter arraynya
+        sum("Bank", ...saldo);
+
+    
+    </script>
+</body>
+</html>
