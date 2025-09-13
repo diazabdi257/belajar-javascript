@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+
+    <script>
+        let arrayKosong = [];
+        let arrayNama = ["Diaz", "Abdi", "Aji"];
+        let arrayCampuran = [1, "Diaz", true];
+        console.log(arrayNama);
+        document.write(arrayNama[0]);
+        document.write("<br>");
+        document.write(arrayNama[1]);
+        document.write("<br>");
+        document.write(arrayNama[2]);
+        document.write("<br>");
+        document.write(arrayNama.length);
+        document.write("<br>");
+        arrayNama.push("New Name");
+        document.write(arrayNama);
+        document.write("<br>");
+        arrayNama.pop();
+        document.write(arrayNama);
+        document.write("<br>");
+        arrayNama.shift();
+        document.write(arrayNama);
+        document.write("<br>");
+        arrayNama.unshift("Diaz");
+        document.write(arrayNama);
+        document.write("<br>");
+        document.write(arrayNama.indexOf("Aji"));
+        document.write("<br>");
+        document.write(arrayNama.indexOf("Not Found"));
+        document.write("<br>");
+        document.write(arrayNama.join(", "));
+        document.write("<br>");
+        document.write(arrayNama.slice(0,2));
+        document.write("<br>");
+        document.write(arrayNama.slice(1));
+        document.write("<br>");
+        document.write(arrayNama.slice(-1));
+        document.write("<br>");
+        document.write(arrayNama.slice(-2));
+        document.write("<br>");
+        document.write(arrayNama.slice(-3, -1));
+        document.write("<br>");
+        document.write(arrayNama.toString());
+        document.write("<br>");
+        document.write(arrayNama.sort());
+        document.write("<br>");
+        document.write(arrayNama.reverse());
+        document.write("<br>");
+        document.write(Array.isArray(arrayNama));
+        document.write("<br>");
+        document.write(Array.isArray("Not Array"));
+        document.write("<br>");
+        document.write(arrayNama.includes("Aji"));
+        document.write("<br>");
+        document.write(arrayNama.includes("Not Found"));
+        document.write("<br>");
+        document.write(arrayNama.splice(1,1,"New Name 1", "New Name 2"));
+        document.write("<br>");
+        document.write(arrayNama);
+        document.write("<br>");
+        document.write("=======================");
+        document.write("<br>");
+        for(let i = 0; i < arrayNama.length; i++) {
+            document.write("Index ke-" + i + " : " + arrayNama[i]);
+            document.write("<br>");
+        }
+    </script>
+    
+</body>
+</html>

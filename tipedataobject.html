@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue"
+        };
+        console.table(person);
+
+        const mobil = {};
+        mobil.merk = "Toyota";
+        mobil.tipe = "Avanza";
+        mobil.warna = "Hitam";
+        mobil.tahun = 2020;
+        mobil.fitur = ["AC", "Power Steering", "Power Window"];
+        mobil.harga = null;
+    
+
+        console.table(mobil);
+
+        delete mobil.warna;
+        console.table(mobil);
+        mobil.harga = 200000000;
+        console.table(mobil);
+
+        console.info("Ini info dari console " + mobil.merk);
+        console.info(`Ini info dari console ${mobil.merk} tipe ${mobil.tipe}`); // template literal
+
+    </script>
+</body>
+</html>

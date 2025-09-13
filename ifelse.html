@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else</title>
+</head>
+<body>
+    <script>
+        const nilaiUjian = 50;
+        const nilaiAbsen = 80;
+
+        const lulusUjian = nilaiUjian >= 60;
+        const lulusAbsen = nilaiAbsen >= 75;
+
+        const lulusKelas = lulusUjian && lulusAbsen;
+
+        if (lulusKelas) {
+            document.write("Selamat, Anda lulus kelas!");
+        } else {
+            document.write("Maaf, Anda tidak lulus kelas.");
+        }
+
+        const totalnilai = nilaiUjian + nilaiAbsen;
+        if (totalnilai >= 150) {
+            document.write("<br>");
+            document.write("Nilai Anda sangat baik!");
+        } else if (totalnilai >= 100) {
+            document.write("<br>");
+            document.write("Nilai Anda cukup baik.");
+        } else {
+            document.write("<br>");
+            document.write("Nilai Anda kurang.");
+        }
+    </script>
+</body>
+</html>

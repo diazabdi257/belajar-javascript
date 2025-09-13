@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const nama = "Diaz";
+        const umur = 20;
+        const negara = "Indonesia";
+        const pekerjaan = "Programmer";
+        let menikah = false;
+
+        const perkenalan = `Nama saya ${nama}, umur saya ${umur} tahun, saya berasal dari ${negara}.`;
+        console.info(perkenalan);
+
+        const templateLain = `Apakah ${nama} sudah mendapatkan KTP ? ${umur >= 17}`;
+        console.info(templateLain);
+
+        const status = menikah ? "Sudah Menikah" : "Belum Menikah";
+        console.info(`Status menikah: ${status}`);
+
+        const biodata = `Nama: ${nama}
+Umur: ${umur} tahun
+Negara: ${negara}
+Pekerjaan: ${pekerjaan}
+status menikah: ${status}`;
+        console.info(biodata);
+
+    ;
+        const value1 = "5";
+        const value2 = 10;
+        const hasiltanpaKonversi = value1 + value2; // "510"
+        console.info(`Hasil tanpa konversi: ${hasiltanpaKonversi}`);
+        const hasilDenganKonversi = Number(value1) + value2; // 15
+        console.info(`Hasil dengan konversi: ${hasilDenganKonversi}`);
+        
+    </script>
+</body>
+</html>
