@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.fullname = `${firstName} ${lastName} `;
+            this.sayHello = function(name) {
+                return `Hello ${this.name}, Nama Saya ${this.firstName}`;
+            }
+        }
+
+        const diaz = new Person("Diaz", "Abdi");
+        const saki = new Person("Saki", "Widya");
+
+        console.log(diaz);
+        console.log(saki);
+    </script>
+</body>
+</html>
