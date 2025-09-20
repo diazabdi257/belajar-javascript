@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        class Saldo {
+
+            #balance = 0;
+
+            deposito(){
+                this.#balance += 50000;
+            }
+            
+            withdraw(){
+                this.#balance -= 50000;
+            }
+
+            get() {
+                return this.#balance
+            }
+            
+        }
+
+        const diaz = new Saldo();
+        console.log(diaz);
+        diaz.deposito();
+        diaz.deposito();
+        diaz.deposito();
+        diaz.deposito();
+        console.log(diaz);
+        console.log(diaz.get());
+        diaz.withdraw();
+        console.log(diaz.get());
+        diaz.withdraw();
+        diaz.withdraw();
+        diaz.withdraw();
+        diaz.withdraw();
+        console.log(diaz.get());
+    </script>
+</body>
+
+</html>

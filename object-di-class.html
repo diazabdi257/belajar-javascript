@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object id class</title>
+</head>
+<body>
+    <script>
+        
+        class Person {
+
+                constructor(firstName, lastName) {
+                    this.firstName = firstName;
+                    this.lastName = lastName;
+                    this.fullname = `${firstName} ${lastName} `;
+                    
+                }
+                sayHello(name) { //pembuatan method di class seperti ini bukan di constructor lebih di anjurkan karena lebih hemat memory karena method hanya dibuat sekali di prototype
+                    return `Hello ${name}, Nama Saya ${this.firstName}`;
+                }
+
+            }
+        const diaz = new Person("Diaz", "Abdi");
+        const saki = new Person("Saki", "Widya");
+        console.log(diaz);
+        console.log(saki);
+        document.writeln(diaz.sayHello(saki.fullname));
+        document.writeln("<br>" + saki.sayHello(diaz.firstName));
+        document.writeln("<br>" + diaz.sayHello("Fafa"));
+    </script>
+</body>
+</html>

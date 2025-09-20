@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        class Kendaraan {
+            constructor(){
+                this.roda = 4;
+            }
+            bendamati = true;
+            bahanbakar (){
+                document.writeln("Butuh Bahan Bakar <br>");
+            };
+        }
+        class Mobil extends Kendaraan {
+            constructor(merk, warna){
+                super();
+                this.merk = merk;
+                this.warna = warna;
+            }
+            jalan(){
+                document.writeln("Mobil " + this.merk + " Warna " + this.warna + " Berjalan <br>");
+                super.bahanbakar();
+            }
+        }
+        class Pesawat extends Kendaraan {
+            constructor(merk, warna = "DEFAULT"){
+                super();
+                this.merk = merk;
+                this.warna = warna;
+            }
+            terbang(){
+                document.writeln("Pesawat " + this.merk + " Warna " + this.warna + " Terbang <br>");
+            }
+        }
+        const avanza = new Mobil("Avanza", "Hitam");
+        avanza.jalan();
+    
+        
+        const boeing = new Pesawat("Boeing", "Pelangi");
+        boeing.terbang();
+        boeing.bahanbakar();
+        document.writeln("Jumlah Roda : " + boeing.roda + "<br>");
+        document.writeln("Jumlah Roda : " + avanza.roda + "<br>");
+
+        console.log(avanza);
+        console.log(boeing);
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+<body>
+    <script>
+        class Person {
+            
+            constructor(firstName, lastName) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.fullname = `${firstName} ${lastName} `;
+                this.sayHello = function(name) { //membuat method di class tidak disarankan karena setiap object akan memiliki method yang sama
+                    return `Hello ${name}, Nama Saya ${this.fullname}`;
+                }
+            }
+            
+        }
+
+        const diaz = new Person("Diaz", "Abdi");
+        const saki = new Person("Saki", "Widya");
+        console.log(diaz);
+        console.log(saki);
+        document.writeln(diaz.sayHello(saki.fullname));
+        document.writeln("<br>" + saki.sayHello(diaz.firstName));
+        document.writeln("<br>" + diaz.sayHello("Fafa"));
+        document.writeln("<br>");
+        document.writeln("<br>");
+        document.writeln(JSON.stringify(diaz));
+        document.writeln("<br>");
+        document.writeln("<br>");
+        document.writeln("<pre>" + JSON.stringify(diaz, null, 2) + "</pre>");
+        document.writeln("<br>");
+        document.writeln(JSON.stringify(diaz, ["firstName", "lastName", "fullname", "sayHello"], 2));
+        document.writeln("<br>");
+        document.writeln("<br>");
+        document.writeln(diaz.sayHello.toString());
+    </script>
+</body>
+</html>
