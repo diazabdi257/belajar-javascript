@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubah Warna</title>
+    <style>
+        body {
+            text-align: center;
+            align-content: center;
+        }
+        #kotakslider{
+            border: 1px solid black;
+            width: 200px;
+            background-color: white;
+        }
+        .alas{
+            text-align: center;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bermain Dengan Warna</h1>
+    <button type="button" id="ubahwarna">Ubah Warna Random</button>
+    <button type="button" id="resetwarna">Reset to white</button>
+    <br>
+    <br>
+    <div class="alas">
+        <div id="kotakslider">
+            <br>
+            <label for="redrange">R</label>
+            <input type="range" name="redrange" id="redrange" min="1" max="255"><br><br>
+            <label for="greenrange">G</label>
+            <input type="range" name="greenrange" id="greenrange" min="1" max="255"><br><br>
+            <label for="bluerange">B</label>
+            <input type="range" name="bluerange" id="bluerange" min="1" max="255"><br><br>
+        </div>
+    </div>
+
+
+
+
+    <script src="../script/warna.js"></script>
+</body>
+</html>

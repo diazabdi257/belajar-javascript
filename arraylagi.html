@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var taifun = ['Diaz', 'Saki', 'Akmal', 'Fafa'];
+        console.log(taifun);
+        for (var i = 0; i < taifun.length; i++){
+            console.log('Anggota Taifun ke - ' + (i+1) + ' adalah ' +taifun[i])
+        }
+
+        // join
+        console.log(taifun.join(', '));
+
+        // push & pop
+        taifun.push('Lutfi');
+        console.log(taifun);
+        taifun.push('Bintang', 'Sulthan');
+        console.log(taifun);
+        console.log(taifun.join(', '))
+        taifun.pop();
+        console.log(taifun)
+        console.log(taifun.join(', '))
+        
+        // unshift & shift
+        taifun.unshift('Abrian');
+        console.log(taifun);
+        taifun.shift();
+        console.log(taifun);
+    </script>
+</body>
+</html>
