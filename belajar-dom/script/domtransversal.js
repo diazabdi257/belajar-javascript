@@ -1,4 +1,4 @@
-const close = document.querySelectorAll(".close");
+// const close = document.querySelectorAll(".close");
 
 // for (let i = 0; i < close.length; i++) {
 //   close[i].addEventListener("click", function (e) {
@@ -7,7 +7,22 @@ const close = document.querySelectorAll(".close");
 //     e.target.parentElement.style.display ='none';
 //   });
 // };
+// close.forEach( function(el) {
+//     console.log('ini console el :' + el);
+//     el.addEventListener('click', function (e) {
+//         console.log('Clicker:', e.target);
+//         e.target.parentElement.style.display = 'none';
+//     });
+// });
 
-close.forEach(el => {
-    el.addEvent
+const container = document.querySelector(".container");
+
+container.addEventListener("click", function (e) {
+  if (e.target.className == "close") {
+    e.target.parentElement.style.display = "none";
+    e.preventDefault();
+  } else if (e.target.classList.contains("card")) {
+    alert("ok");
+    e.stopPropagation(); // Mencegah event bubbling
+  }
 });
